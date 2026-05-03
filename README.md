@@ -4,7 +4,7 @@ A simple tool for anyone who takes dataset quality seriously.
 
 ---
 
-✅## What It Does
+✅ **What It Does**
 
 Most tagging tools are image-centric — you open an image, then edit its tags. TagWalker flips that around.
 
