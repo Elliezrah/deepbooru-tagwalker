@@ -1,6 +1,6 @@
 # Deepbooru TagWalker
 
-A simple but surprisingly useful tool for anyone who takes dataset quality seriously.
+A simple tool for anyone who takes dataset quality seriously.
 
 ---
 
