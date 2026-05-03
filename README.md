@@ -4,7 +4,7 @@ A simple tool for anyone who takes dataset quality seriously.
 
 ---
 
-## What It Does
+✅ ## What It Does
 
 Most tagging tools are image-centric — you open an image, then edit its tags. TagWalker flips that around.
 
@@ -18,7 +18,7 @@ It's a small idea, but nothing else really does it this way.
 
 ---
 
-## Who It's For
+🎁 ## Who It's For
 
 Anyone training LoRA or fine-tuning models on Deepbooru-style tagged datasets who wants to be confident their tags are actually correct — not just present.
 
@@ -29,7 +29,7 @@ Especially useful when:
 
 ---
 
-## Features
+📜 ## Features
 
 - Tag-first sequential workflow
 - Image queue sidebar with full color coding — green (yes), red (no), orange (skipped), blue (current)
@@ -41,7 +41,7 @@ Especially useful when:
 
 ---
 
-## Download
+🔷 ## Download
 
 Go to the [Releases](../../releases) page and download the `.exe`. No install, no Python required — just run it.
 
@@ -49,7 +49,7 @@ Go to the [Releases](../../releases) page and download the `.exe`. No install, n
 
 ---
 
-## Usage
+🔄 ## Usage
 
 1. Launch the program
 2. Open your dataset folder (folder containing image + `.txt` tag file pairs) [Both must be present in order for the program to load the lists correctly.]
@@ -60,7 +60,7 @@ Go to the [Releases](../../releases) page and download the `.exe`. No install, n
 
 ---
 
-## Dataset Format
+🔣 ## Dataset Format
 
 Standard Stable Diffusion / Deepbooru format:
 
@@ -74,7 +74,7 @@ dataset/
 
 ---
 
-## Known Issues & Limitations
+🔶 ## Known Issues & Limitations
 
 **Missing features**
 
@@ -91,7 +91,7 @@ These are planned for future versions. For now the core workflow — sequential 
 
 ---
 
-## Origin
+🌄 ## Origin
 
 This is my first ever vibe coding project. I have zero programming knowledge.
 
