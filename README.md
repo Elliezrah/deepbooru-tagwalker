@@ -78,14 +78,14 @@ dataset/
 
 **Missing features**
 
--No tag search or filter — all tags load into the sidebar as-is
--No save/resume feature — progress is not remembered between sessions, so large projects require manual tracking of where you left off
--No confirmation when accidentally clicking a different tag mid-session — the program will switch context and your current progress tracking is lost
+- No tag search or filter — all tags load into the sidebar as-is
+- No save/resume feature — progress is not remembered between sessions, so large projects require manual tracking of where you left off
+- No confirmation when accidentally clicking a different tag mid-session — the program will switch context and your current progress tracking is lost
 
 **Quirks**
 
--When all tags are fully processed, the program automatically jumps back to the top of the tag list rather than showing a completion message — manually verify all tags are marked done before closing
--The current image highlight in the queue sidebar can occasionally behave unexpectedly after manual jumps
+- When all tags are fully processed, the program automatically jumps back to the top of the tag list rather than showing a completion message — manually verify all tags are marked done before closing
+- The current image highlight in the queue sidebar can occasionally behave unexpectedly after manual jumps
 
 These are planned for future versions. For now the core workflow — sequential per-tag reviewing across an entire dataset — works reliably.
 
