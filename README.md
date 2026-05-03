@@ -2,7 +2,7 @@
 
 A simple tool for anyone who takes dataset quality seriously.
 
-(images/1_hero.webp)
+![Main Interface](images/1_hero.webp)
 
 ---
 
@@ -36,7 +36,7 @@ Especially useful when:
 - Tag-first sequential workflow
 - Image queue sidebar with full color coding — green (yes), red (no), orange (skipped), blue (current)
 
-(images/2_edit_state.webp)
+![Queue Colors](images/2_edit_state.webp)
   
 - Undo / Back button that correctly restores queue order
 - Skip images and return to them later
