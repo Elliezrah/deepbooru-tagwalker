@@ -117,7 +117,7 @@ Captions have a token limit, and past it the tail is silently cut — worse, wit
 
 Pick your target and the limit, warning thresholds, and per-tag costs all follow it. Over-limit captions get a marker that sorts them to the top of the folder. Counting a Flux caption with CLIP's ruler was quietly wrong before; this gets it right. (The Flux tokenisers load only when selected, so they add nothing to startup.)
 
-![Dataset health](images/health_checker.png)
+![Dataset health](images/token_counter.png)
 
 </details>
 
@@ -132,6 +132,8 @@ Pick your target and the limit, warning thresholds, and per-tag costs all follow
 - Images at an **unusual resolution** (too small to bucket, or an extreme aspect ratio) or that cannot be read.
 - Images that are **not perfectly square** (for non-bucketed training; off by default).
 - **Stray caption files** with no matching image.
+
+![Dataset health](images/health_checker.png)
 
 **Statistics** shows the dataset at a glance: headline numbers, a tag-frequency bar chart, which tags appear together, and how caption lengths sit against the token limit.
 
