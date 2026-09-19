@@ -117,7 +117,7 @@ Captions have a token limit, and past it the tail is silently cut — worse, wit
 
 Pick your target and the limit, warning thresholds, and per-tag costs all follow it. Over-limit captions get a marker that sorts them to the top of the folder. Counting a Flux caption with CLIP's ruler was quietly wrong before; this gets it right. (The Flux tokenisers load only when selected, so they add nothing to startup.)
 
-![Dataset health](images/token_counter.png)
+![Token_counter](images/token_counter.png)
 
 </details>
 
@@ -135,7 +135,9 @@ Pick your target and the limit, warning thresholds, and per-tag costs all follow
 
 ![Dataset health](images/health_checker.png)
 
-**Statistics** shows the dataset at a glance: headline numbers, a tag-frequency bar chart, which tags appear together, and how caption lengths sit against the token limit.
+**Statistics** shows the dataset at a glance: headline numbers, a tag-frequency bar chart, which tags appear together, and how caption lengths sit against the token limit. Large projects can be tracked with state save and resumed anytime. Stats menu allows you to see the project completion rate for tracked projects.
+
+![stats](images/complete_screen.png)
 
 </details>
 
