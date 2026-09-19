@@ -162,9 +162,13 @@ Every operation here is atomic and undoable as a single step. Your original **im
 - Check every tag against a bundled **201,269-tag Danbooru database** to catch typos, deprecated tags, and made-up ones — with fixes you apply and undo in one shot.
 - Keep an **exceptions list** of tags the audit should never flag (studio names, original-character tags, deliberate conventions).
 
+![Audit_tool](images/audit_tool.png)
+
 **Conflict rules**
 - Define tags that **must not appear together** (like `indoors` with `outdoors`) or tags that **require another** (like `cat_ears` needing `animal_ears`). Rules understand aliases.
 - Scan the dataset for violations and fix them from one dialog — with a zoomable image viewer, checkboxes to remove several tags at once, and per-rule batch controls. Nothing changes until you choose.
+
+![Conflict_checker_rules](images/conflict_rule.png)
 
 </details>
 
@@ -180,6 +184,8 @@ A separate window for getting images ready to train, which **writes to its own o
 - **Kohya-style aspect-ratio bucketing** (2048 / 1536 / 1024 / 768 / 512, default 1024).
 - **Colour jitter:** apply controlled, re-rollable colour variation.
 
+![Image_editor](images/image_editor.png)
+
 </details>
 
 <details>
@@ -188,6 +194,8 @@ A separate window for getting images ready to train, which **writes to its own o
 <br>
 
 Search Danbooru posts for reference while you tag (only if you have turned network lookups on), with rating filters and a bookmark manager to save posts you want to revisit. It respects your tag blacklist before any search.
+
+![post_browser](images/post_browser.png)
 
 </details>
 
