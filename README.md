@@ -27,7 +27,7 @@ That part is simple, and it is not the interesting part.
 
 The interesting part is that TagWalker treats a caption set as **training data with properties you can measure** — which tags your base model has actually seen, which are too rare to learn, which will be truncated away, and which are quietly fusing into your trigger.
 
-![TagWalker](images/1_hero.png)
+![TagWalker](images/main_ui.png)
 
 ---
 
