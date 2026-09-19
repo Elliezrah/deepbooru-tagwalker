@@ -81,7 +81,7 @@ A one-line verdict tells you whether a tag is stable, was renamed, or is too new
 
 All of this works fully offline from bundled data. The example images are the only part that touches the network, and only if you turn it on.
 
-![Tag Referencer](images/tagreferencer.png)
+![Tag Referencer](images/TagReferencer.png)
 
 </details>
 
