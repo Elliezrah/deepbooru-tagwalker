@@ -2,6 +2,8 @@
 
 **Caption auditing for people who train LoRAs and have stopped trusting their auto-tagger.**
 
+![icon](images/icon.png)
+
 ---
 
 ## Three things that have probably happened to you
