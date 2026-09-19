@@ -74,7 +74,7 @@ The statistics window reports on the dataset as a training artifact, not on how 
 - **Your vocabulary versus the base model.** How many of your tags the selected snapshot knows well, barely, or has never seen. That last group is your own tokens — or your typos.
 - **Where your captions diverge from Danbooru.** Pairings you use far more than the site does (the signature of what you are teaching, or a correlation about to be baked in), and pairings the base model expects that your captions leave unwritten.
 
-![Dataset health](images/completel_screen.png)
+![Dataset health](images/health_checker.png)
 
 ### And a Danbooru browser, because it needed one
 
