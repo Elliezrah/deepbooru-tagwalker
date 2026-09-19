@@ -2,6 +2,8 @@
 
 **A fast, image-first way to review and fix the tags across an entire LoRA dataset — one image at a time.**
 
+![icon](images/icon.png)
+
 You see an image. You see one of its tags. You press **Yes** or **No**. The caption file is rewritten instantly, and the next image appears. That is the whole loop, and it is built to be fast enough to take a folder of a thousand images from "auto-tagged and messy" to "checked and clean" in one sitting.
 
 If you have played Civitai's *Knights of the New Order* image-rating game, the rhythm is familiar: image up, quick decision, next — except here you are cleaning your own training data instead of moderating a queue.
