@@ -269,7 +269,7 @@ Images without a caption file are shown and can be given one. Several folders ca
 
 This program was written, in full, by **Claude Opus** (Anthropic). Not "AI-assisted" — the state engine, the file-writing layer, the save format, the interface, and the 92-suite regression harness were all authored by the AI across a long series of design sessions. The v1 prototype was vibe-coded with Qwen and Claude Sonnet; v2 is a complete rebuild.
 
-<p style="color: #0000FF;">The publisher writes no code. What they contributed is the thing that mattered: **knowing what was wrong.** Nearly every bug that made this program usable was found by a human using it and reporting what felt off — thumbnails that would not open, a window that hid behind the main one, a program that stuttered on every page of images. The AI's own tests passed through all of them; several of those tests asserted the bug was correct behaviour.</p>
+The publisher writes no code. What they contributed is the thing that mattered: **knowing what was wrong.** Nearly every bug that made this program usable was found by a human using it and reporting what felt off — thumbnails that would not open, a window that hid behind the main one, a program that stuttered on every page of images. The AI's own tests passed through all of them; several of those tests asserted the bug was correct behaviour.
 
 The engineering is the AI's. The judgement about what a caption tool should *be* is the publisher's.
 
