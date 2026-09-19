@@ -6,7 +6,7 @@ You see an image. You see one of its tags. You press **Yes** or **No**. The capt
 
 If you have played Civitai's *Knights of the New Order* image-rating game, the rhythm is familiar: image up, quick decision, next — except here you are cleaning your own training data instead of moderating a queue.
 
-![TagWalker](images/1_hero.png)
+![TagWalker](images/main_ui.png)
 
 ---
 
@@ -79,7 +79,7 @@ A one-line verdict tells you whether a tag is stable, was renamed, or is too new
 
 All of this works fully offline from bundled data. The example images are the only part that touches the network, and only if you turn it on.
 
-![Tag Referencer](images/2_referencer.png)
+![Tag Referencer](images/tagreferencer.png)
 
 </details>
 
@@ -97,7 +97,7 @@ It knows things a plain word-counter does not:
 
 You can export the ranked report, and optionally a briefing block that hands the data to a language model to answer follow-up questions.
 
-![Pruning Advisor](images/3_pruning.png)
+![Pruning Advisor](images/pruning_advisor.png)
 
 </details>
 
@@ -115,7 +115,7 @@ Captions have a token limit, and past it the tail is silently cut — worse, wit
 
 Pick your target and the limit, warning thresholds, and per-tag costs all follow it. Over-limit captions get a marker that sorts them to the top of the folder. Counting a Flux caption with CLIP's ruler was quietly wrong before; this gets it right. (The Flux tokenisers load only when selected, so they add nothing to startup.)
 
-![Dataset health](images/4_stats.png)
+![Dataset health](images/health_checker.png)
 
 </details>
 
