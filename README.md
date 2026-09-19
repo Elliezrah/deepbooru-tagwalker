@@ -47,7 +47,7 @@ A one-line verdict says whether the tag is stable, was renamed since, or postdat
 
 **Compare mode** puts two tags side by side with their post counts and how much of their usual company they share — which answers the question you really have: *are these two interchangeable, or not?*
 
-![Tag Referencer](images/2_referencer.png)
+![Tag Referencer](images/TagReferencer.png)
 
 ### 2. Which tags are fusing into your trigger?
 
@@ -61,7 +61,7 @@ What it knows that a word-frequency counter does not:
 - **A tag on 90% of your images is not automatically a constant.** If the other 10% carry `2girls`, subject count *varies* in your dataset and `1girl` is merely its majority value. Drop it and every generation fights a bias welded into your trigger. This is worked out from your own captions, so it catches your vocabulary as readily as the obvious cases.
 - **Your trigger token is never a candidate.** Being on every image is what makes an ordinary tag droppable; for the trigger, that ubiquity is the entire mechanism.
 
-![Pruning Advisor](images/3_pruning.png)
+![Pruning Advisor](images/pruning_advisor.png)
 
 ### 3. What will be cut before training even sees it?
 
@@ -74,7 +74,7 @@ The statistics window reports on the dataset as a training artifact, not on how 
 - **Your vocabulary versus the base model.** How many of your tags the selected snapshot knows well, barely, or has never seen. That last group is your own tokens — or your typos.
 - **Where your captions diverge from Danbooru.** Pairings you use far more than the site does (the signature of what you are teaching, or a correlation about to be baked in), and pairings the base model expects that your captions leave unwritten.
 
-![Dataset health](images/4_stats.png)
+![Dataset health](images/completel_screen.png)
 
 ### And a Danbooru browser, because it needed one
 
@@ -82,7 +82,7 @@ Uncurated search in its own window, for seeing how a tag is used in practice rat
 
 It is also, incidentally, faster than browsing Danbooru in a browser.
 
-![Post Browser](images/5_browser.png)
+![Post Browser](images/post_browser.png)
 
 ---
 
