@@ -1,7 +1,5 @@
 # Deepbooru TagWalker
 
-**Caption auditing for people who train LoRAs and have stopped trusting their auto-tagger.**
-
 ![icon](images/icon.png)
 
 ---
