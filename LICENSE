@@ -1,21 +1,134 @@
-MIT License
+Deepbooru TagWalker — Non-Commercial Share-Alike License
+Version 1.0
 
-Copyright (c) 2026 Elliezrah
+Copyright (c) 2026 Elliezrah (publisher and copyright holder).
+Application software authored by Claude Opus (Anthropic) on the
+publisher's behalf; all rights held by the publisher.
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+================================================================
+PLAIN-LANGUAGE SUMMARY (not the license; the terms below govern)
+================================================================
+You may use, study, modify, and share this software for free, for any
+non-commercial purpose. If you share a modified version, you must keep
+it under this same license and credit the original. You may not sell
+the software or include it in a commercial or proprietary product
+without the copyright holder's written permission. There is no
+warranty.
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+================================================================
+TERMS
+================================================================
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+1. DEFINITIONS
+
+   "The Software" means the Deepbooru TagWalker program and its source
+   code, in whole or in part, including any modified versions.
+
+   "You" means the individual or entity exercising rights under this
+   License.
+
+   "Non-Commercial" means not primarily intended for or directed toward
+   commercial advantage or monetary compensation. Personal use,
+   research, education, and use by non-profit organizations are
+   Non-Commercial. Use is NOT Non-Commercial if You or any party
+   receives payment, in money or in kind, in exchange for the Software
+   or for access to, hosting of, or services built around the Software.
+
+   "Commercial Use" means any use that is not Non-Commercial, including
+   but not limited to: selling, licensing for a fee, offering as part
+   of a paid product or paid service, or incorporating the Software
+   into a proprietary or for-profit product.
+
+   "Copyright Holder" means Elliezrah, the publisher, who holds all
+   rights in the Software and is the only party able to grant
+   exceptions to this License.
+
+2. GRANT OF RIGHTS (NON-COMMERCIAL)
+
+   Subject to the terms of this License, the Copyright Holder grants
+   You a worldwide, royalty-free, non-exclusive license to:
+
+   (a) use and run the Software for any Non-Commercial purpose;
+   (b) study and modify the Software's source code; and
+   (c) reproduce and distribute the Software and Your modified
+       versions, for Non-Commercial purposes only, provided You comply
+       with Sections 3 and 4.
+
+3. ATTRIBUTION
+
+   Every copy or substantial portion of the Software You distribute,
+   modified or not, must:
+
+   (a) retain this License in full;
+   (b) retain the copyright notice above; and
+   (c) include a clear, visible credit identifying the original work as
+       "Deepbooru TagWalker, published by Elliezrah, originally
+       developed by Claude Opus (Anthropic)," with a link to the
+       original project where practical.
+
+   If You modify the Software, You must add a prominent notice stating
+   that You changed it, and the date of change. You must not imply that
+   the Copyright Holder or the original developer endorses You or Your
+   modified version.
+
+4. SHARE-ALIKE
+
+   If You distribute the Software or any modified version, You must
+   license the entire work under this same License, Version 1.0. You
+   may not impose additional restrictions, and You may not relicense
+   it under different terms.
+
+5. COMMERCIAL USE REQUIRES PERMISSION
+
+   Commercial Use of the Software, in original or modified form, is NOT
+   permitted under this License. This includes selling the Software,
+   charging for access to it, bundling it into a paid or proprietary
+   product, or any use primarily directed toward commercial advantage.
+
+   Commercial Use is available only under a separate written agreement
+   with, and the prior written consent of, the Copyright Holder. To
+   request commercial terms, contact the Copyright Holder.
+
+6. NO TRADEMARK OR PATENT RIGHTS
+
+   This License grants no rights in the names, logos, or trademarks of
+   the Copyright Holder or of Anthropic. No patent rights are granted
+   except as strictly necessary to exercise the rights expressly
+   granted above for Non-Commercial purposes.
+
+7. TERMINATION
+
+   Any breach of this License automatically terminates Your rights
+   under it. If You cure the breach within 30 days of becoming aware of
+   it, and it is Your first breach, Your rights are reinstated.
+   Sections 6, 8, 9, and 10 survive termination.
+
+8. NO WARRANTY
+
+   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+   EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+   MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND
+   NON-INFRINGEMENT.
+
+9. LIMITATION OF LIABILITY
+
+   IN NO EVENT SHALL THE COPYRIGHT HOLDER OR ANY CONTRIBUTOR BE LIABLE
+   FOR ANY CLAIM, DAMAGES, OR OTHER LIABILITY, WHETHER IN AN ACTION OF
+   CONTRACT, TORT, OR OTHERWISE, ARISING FROM, OUT OF, OR IN CONNECTION
+   WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. YOU
+   BEAR ALL RISK ARISING FROM USE OF THE SOFTWARE, INCLUDING ANY RISK
+   TO YOUR DATA OR CAPTION FILES.
+
+10. SEVERABILITY
+
+   If any provision of this License is held unenforceable, the
+   remaining provisions continue in full force.
+
+================================================================
+END OF TERMS
+================================================================
+
+Note: This is a source-available, non-commercial license. It is
+intentionally NOT an OSI-approved "open source" license, because it
+restricts commercial use. Please do not describe it as "open source."
+For genuinely commercial arrangements, contact the Copyright Holder.
