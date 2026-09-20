@@ -1,32 +1,95 @@
-# Python bytecode — regenerated on every run, never belongs in a repo
+# ============================================================
+#  TagWalker .gitignore
+#  Keeps build junk, caches, personal settings, and private
+#  working notes out of the public repository.
+# ============================================================
+
+# --- Python bytecode / cache (regenerated on every run) -----
 __pycache__/
 *.py[cod]
 *$py.class
+*.pyc
+*.pyo
 
-# Build output
+# --- Build & packaging output -------------------------------
 build/
 dist/
 *.spec
 *.exe
+*.manifest
+*.pkg
 
-# Virtual environments
+# --- Virtual environments -----------------------------------
 venv/
 .venv/
 env/
+ENV/
+.env
 
-# Editor / OS noise
+# --- Editor / IDE / OS noise --------------------------------
 .vscode/
 .idea/
 *.swp
+*.swo
+*~
 .DS_Store
 Thumbs.db
+desktop.ini
 
-# Local user state — these live in the user's config directory at
-# runtime; a copy here would be someone's personal settings.
+# --- Test scratch -------------------------------------------
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+
+# --- Runtime user state (these live in the user's own config
+#     directory when the app runs; a copy here would be
+#     someone's personal settings, not part of the program) --
 *.log
 error.log
 bookmarks.json
 tagwalker_settings.ini
+*.ini
 
-# Test scratch
-.pytest_cache/
+# ============================================================
+#  PRIVATE INTERNAL DOCS — working notes, design docs, and
+#  roadmap that should NOT be published. These are your own
+#  reference material, not part of the released project.
+#  (README.md, LICENSE, CHANGELOG.md, EULA.md, and FEATURES.md
+#   are intentionally NOT ignored — those are public-facing.)
+# ============================================================
+ARCHITECTURE_REVIEW.md
+BUILD_NOTES.md
+DESIGN_NSFW_SUPPRESSION.md
+DESIGN_TAG_REFERENCE.md
+DONATION_MESSAGING.md
+GITHUB_LAUNCH_KIT.md
+ICON_GUIDE.md
+KNOWN_ISSUES.md
+KOHYA_TOKEN_LIMIT_NOTES.md
+LORA_TRAINING_DYNAMICS.md
+MULTI_CHARACTER_CAPTIONING.md
+NEXT_LORA_FIX_LIST.md
+PACKAGING.md
+PLANNED_FEATURES.md
+SCREENSHOT_GUIDE.md
+SUPER_PACKER_TAG_SETS.md
+TAG_PRUNING_LOGIC.md
+TOKEN_SAVING_PRIORITY.md
+TOKEN_SAVING_TRIGGERS.md
+TONGUE_TEETH_CONTROL_SCHEME.md
+FEATURE_LIST_FOR_README.md
+
+# --- Private design assets ----------------------------------
+branding/
+
+# ============================================================
+#  OPTIONAL — uncomment to keep the repo lean by excluding the
+#  large bundled tokenizer data. If you exclude these, the
+#  auto-generated source archive won't rebuild a complete exe
+#  without the user downloading them separately (the README
+#  documents where to get them). Leave commented to ship a
+#  self-contained repo.
+# ============================================================
+# resources/tokenizers/mistral/tekken.json
+# resources/tokenizers/qwen3/tokenizer.json
