@@ -1,0 +1,4 @@
+{
+  "_comment": "Lettered emoticon / face tags that the underscore<->space reformat must NOT convert blindly, because their underscores are part of a face rather than word separators. The 'underscore + no ASCII letters' pattern rule in core/reformat_guard.py already catches the symbol faces (^_^, >_<, @_@, =_=, +_+, |_|, 0_0, ._.), so those are intentionally NOT listed here. This list only covers the LETTERED ones, which look like ordinary word-joins and so can't be detected by pattern. Verified against the bundled danbooru tag list by post count. The reformat preview shows every change with these excluded by default, so this list only needs the common cases; anything missed can still be unticked in the preview.",
+  "tags": ["o_o", "o_0", "0_o", "u_u", ">_o", "o_<", "o_x", "x_o", "x_x", "t_t"]
+}
