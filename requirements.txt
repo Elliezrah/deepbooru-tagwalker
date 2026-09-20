@@ -1,0 +1,66 @@
+# TagWalker dependencies — pinned for reproducible release builds.
+#
+# A single .exe must run on Windows 10 AND 11. The decisive factor is
+# the BUILD MACHINE, not these pins: PyInstaller does not bundle the OS,
+# so a Windows 10 build runs on 10 and 11, but a Windows 11 build may
+# fail on 10. BUILD ON WINDOWS 10 (or a Win10 VM / GitHub Actions Win10
+# runner). See PACKAGING.md.
+#
+# Environment:
+#   - 64-bit Python 3.10, 3.11, or 3.12 (3.12 recommended; 3.10 is the
+#     PySide6 floor). 64-bit only — no 32-bit PySide6 wheels exist.
+#
+# PySide6 6.6.3.1: a conservative, widely-deployed release that supports
+#   Windows 10 and 11. If you ever bump it, re-test on a CLEAN Windows 10
+#   machine — some PySide6 >6.5.3 Addons configurations have been
+#   reported to hang on Win10. TagWalker uses only core widgets, so this
+#   is unlikely, but verify after any version change.
+PySide6==6.6.3.1
+
+# PyInstaller 6.11.1 officially supports Windows 8+. We pin PyInstaller
+# exactly but intentionally DO NOT pin pyinstaller-hooks-contrib to a
+# hardcoded number: PyInstaller depends on it, so pip resolves a
+# compatible hooks-contrib automatically and keeps the two in sync.
+# Hardcoding a mismatched hooks-contrib is the failure mode the docs
+# warn about; letting the resolver handle it avoids that.
+pyinstaller==6.11.1
+
+# Pillow is a RUNTIME dependency, not just a test one. The Dataset
+# Health Check reads image headers for its resolution and aspect-ratio
+# rules, and that is the only place the app touches PIL — which is
+# exactly why it was easy to miss here.
+#
+# Its absence does not crash: the read sits in a try/except that
+# reports "unreadable image file". Without Pillow that fires for EVERY
+# image, so a build made on a machine without it produces an .exe
+# whose health check calmly declares the entire dataset corrupt. The
+# app now names a missing library separately, and build.bat refuses to
+# build without it, but pinning it here is the actual fix.
+Pillow>=10.0,<12
+
+# --- Multi-tokenizer token counter dependencies ---
+# The token counter can count against several trainer families, each with
+# its own tokenizer. These libraries are imported LAZILY (only when a Flux
+# tokenizer is first used), so they add ZERO startup cost — but they must
+# be installed for those tokenizers to work, and declared as
+# --hidden-import in build.bat so PyInstaller bundles them (its static
+# scan can't see a deferred import). Each is independent: if one is
+# absent, only that tokenizer disables (the counter says so), the rest
+# work. Include whichever targets you ship.
+#
+# regex: REQUIRED for the Flux.2 Dev (Mistral / Tekken) counter. Mistral's
+#   tekken.json pre-tokenization pattern uses \p{...} Unicode classes that
+#   Python's stdlib `re` cannot parse. ~3 MB. This is the ONLY dependency
+#   the Tekken path needs — we deliberately do NOT use mistral-common
+#   (~80 MB) or tiktoken; core/tekken_counter.py reimplements the counting
+#   path in pure Python and was validated to match mistral-common exactly.
+regex>=2024.0
+
+# sentencepiece: for the Flux.1 (T5-XXL) counter — reads
+#   resources/tokenizers/t5xxl/spiece.model. Omit if you don't ship Flux.1.
+sentencepiece>=0.2.0
+
+# tokenizers: HuggingFace Rust tokenizer, for the Flux.2 Klein (Qwen3)
+#   counter — reads resources/tokenizers/qwen3/tokenizer.json. Omit if you
+#   don't ship Flux.2 Klein.
+tokenizers>=0.20,<1

@@ -1,0 +1,32 @@
+# Python bytecode — regenerated on every run, never belongs in a repo
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Build output
+build/
+dist/
+*.spec
+*.exe
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# Editor / OS noise
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
+
+# Local user state — these live in the user's config directory at
+# runtime; a copy here would be someone's personal settings.
+*.log
+error.log
+bookmarks.json
+tagwalker_settings.ini
+
+# Test scratch
+.pytest_cache/
