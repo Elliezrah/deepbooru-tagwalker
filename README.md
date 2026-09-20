@@ -297,7 +297,7 @@ The goal is simple: keep TagWalker free and improvable by individuals and small 
 
 TagWalker is free and stays free — no ads, no telemetry, no "Pro" tier holding features hostage. If it spared you an evening of squinting at captions and you would like to say thanks, there is a tip jar. Entirely optional, quietly appreciated, and it keeps a strange little one-human-zero-programmers project alive.
 
-- Ko-fi: *(your link)*
+- Ko-fi: [*(ko-fi.com/elliezrah)*](https://ko-fi.com/elliezrah)
 
 ---
 
