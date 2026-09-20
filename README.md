@@ -28,6 +28,33 @@ This is the part that matters, so it is not hidden below.
 
 **Nothing is guesswork.** A completion percentage tracks how much of the dataset you have actually decided, so "done" is a fact, not a feeling. Stop whenever you like — the number just makes it a choice.
 
+<details>
+<summary><b>The controls guide</b> (click to expand)</summary>
+
+<br>
+
+How to drive it
+
+A few controls carry most of the work. Defaults shown; all keys are rebindable in Settings.
+
+Walk a tag. Click a tag in the list. The queue fills with every image that has it, and you step through deciding Yes (Y), No (N), or Skip (Space). Each answer writes to disk at once and moves to the next image. Back (Backspace) undoes the last decision and steps back.
+
+Batch a tag over many images. Click a tag to load its images, then Shift+click (a range) or Ctrl+click (individual) in the queue to select several — or select the whole queue. Now Yes / No applies to all selected images at once, as a single undo.
+
+Move without deciding. Left / Right step through images. Hold Shift and scroll the mouse wheel over the queue to flip through it.
+
+Zoom the image. Scroll the wheel over the image to zoom toward the cursor, drag to pan, and Esc to close the zoom.
+
+Narrow the queue. Use the filter to show only what's left — e.g. just the images still undecided for the current tag — turning a full pass into a quick spotting pass.
+
+Undo anything. Ctrl+Z reverses any change, batch edits included; the Edit menu also has "undo everything".
+
+Right-click an image in the queue for Properties… (size, format, token count) or Meta info… (the prompt and settings the image was generated with).
+
+Save your place. Ctrl+S saves the session; autosave also runs on its own. Reopen later and you land exactly where you left off.
+
+</details>
+
 ---
 
 ## Move through images fast
