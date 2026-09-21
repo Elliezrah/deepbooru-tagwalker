@@ -1,4 +1,4 @@
-# Deepbooru TagWalker - Knights of New Order style local dataset tagger
+# Deepbooru TagWalker
 
 **A fast, image-first way to review and fix the tags across an entire LoRA dataset — one image at a time.**
 
