@@ -604,10 +604,10 @@ class MainWindow(QMainWindow):
         # First entry, deliberately. The program's weakness was never
         # a missing tool — it was that opening it presented a menu
         # rather than a path.
-        self._act_guide = QAction("Getting Started\u2026", self)
+        self._act_guide = QAction("User Guide\u2026", self)
         self._act_guide.setToolTip(
-            "The order to do things in, and roughly how long a "
-            "dataset should take.")
+            "Controls, what each tool does, the recommended workflow, "
+            "and tips \u2014 browse by topic.")
         self._act_guide.triggered.connect(self._action_getting_started)
         m_help.addAction(self._act_guide)
         m_help.addSeparator()
@@ -2101,12 +2101,10 @@ class MainWindow(QMainWindow):
         dlg.exec()
 
     def _action_getting_started(self) -> None:
-        """Help → Getting Started."""
-        from ui.getting_started import PAGES
-        from ui.paged_help_dialog import PagedHelpDialog
+        """Help → User Guide."""
+        from ui.help_browser_dialog import HelpBrowserDialog
 
-        self._guide_dlg = PagedHelpDialog(
-            "Getting Started", PAGES, self)
+        self._guide_dlg = HelpBrowserDialog(self._settings, self)
         self._guide_dlg.show()
         self._guide_dlg.raise_()
 

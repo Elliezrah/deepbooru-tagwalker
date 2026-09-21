@@ -234,6 +234,20 @@ class _TagTreeWidget(QTreeWidget):
             self.setCurrentItem(item)
             self.scrollToItem(item)
 
+    def keyPressEvent(self, event) -> None:  # noqa: N802
+        # Swallow Left / Right. By default a QTreeWidget collapses /
+        # expands the current item on these keys, which — because the
+        # user's fingers rest near the arrow keys while navigating — was
+        # accidentally folding the folder header (there is only the one
+        # root group, since subfolders aren't loaded, so folding it just
+        # hid the whole list). Folding serves no purpose here, so Left /
+        # Right do nothing. Up / Down still move the selection, and the
+        # image queue owns the real image navigation.
+        if event.key() in (Qt.Key.Key_Left, Qt.Key.Key_Right):
+            event.ignore()
+            return
+        super().keyPressEvent(event)
+
 
 class TagTree(QFrame):
     """Left sidebar showing the tag inventory grouped by subfolder."""
@@ -450,8 +464,14 @@ class TagTree(QFrame):
         h.setSectionResizeMode(0, QHeaderView.ResizeMode.ResizeToContents)
         h.setSectionResizeMode(1, QHeaderView.ResizeMode.Stretch)
         self.tree.setAnimated(True)
-        # Prevent accidental collapse when the user is rapidly clicking
-        # tag rows. Expand/collapse still works via the arrow indicator.
+        # Folder headers are NOT collapsible. There is only ever the one
+        # root group (subfolders aren't loaded), so folding it would just
+        # hide the whole tag list for no benefit. Turning off the expand
+        # indicator removes the little fold arrow entirely, and root
+        # decoration is dropped so no empty indicator column is drawn.
+        # Headers are force-expanded on every build below.
+        self.tree.setItemsExpandable(False)
+        self.tree.setRootIsDecorated(False)
         self.tree.setExpandsOnDoubleClick(False)
         self.tree.itemClicked.connect(self._on_item_clicked)
         # Also select a tag when the current row changes via the keyboard
@@ -636,9 +656,12 @@ class TagTree(QFrame):
                 # one call.
                 self._install_folder_progress_widget(subfolder, folder_item)
 
-                folder_item.setExpanded(
-                    True if first_build else subfolder in expanded_folders
-                )
+                # Always expanded: folder headers are no longer
+                # collapsible (see setItemsExpandable(False) in setup), so
+                # tags must always be visible. The remembered-expansion
+                # bookkeeping is retained above harmlessly but no longer
+                # gates visibility.
+                folder_item.setExpanded(True)
 
             # After rebuild, restore the current-tag highlight if any.
             self._refresh_selection_highlight()
@@ -737,7 +760,27 @@ class TagTree(QFrame):
         image_count = len(
             self._state._images_by_subfolder.get(subfolder, [])
         )
-        widget.update_progress(subfolder, image_count, completed, total)
+        # For the root group (empty subfolder), show the dataset's own
+        # folder name rather than a generic "(root)" — or "multiple
+        # folders" when several were loaded and merged. Subfolders (a
+        # non-empty name) are shown as-is. (Subfolders are not currently
+        # loaded — images inside them are ignored — so in practice this
+        # is the single root header, but the per-subfolder path stays
+        # correct if that ever changes.)
+        display = subfolder if subfolder else self._root_display_name()
+        widget.update_progress(display, image_count, completed, total)
+
+    def _root_display_name(self) -> str:
+        """The label for the root (top-level) group: the loaded dataset's
+        folder name, or 'multiple folders' when several were loaded and
+        merged into one dataset. Falls back to '(root)' only if there is
+        no state to name."""
+        if self._state is None:
+            return "(root)"
+        roots = getattr(self._state, "roots", None) or [self._state.root]
+        if len(roots) > 1:
+            return "multiple folders"
+        return roots[0].name if roots and roots[0] is not None else "(root)"
 
     def _folder_for_tag(self, tag: str) -> Optional[str]:
         """Reverse-lookup: which subfolder does this tag belong to in
