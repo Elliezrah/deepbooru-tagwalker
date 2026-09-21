@@ -36,11 +36,17 @@ This is the part that matters, so it is not hidden below.
 ![UI_Guide](images/main_ui_guide.png)
 
 1.Task image viewport. (Tips: Click to expand, double to click to close expand window.)
+
 2.Tag category selection panel. (Tips: Right-click to access more control options.)
+
 3.Task image queue panel. (Tips: Use filtering option to customize your walk mode. Right-click on image title to access image info.)
+
 4.File caption state display. (Tips: tags can be removed/added here in direct method.)
+
 5.Action log.
+
 6.Tag category completion visual feedback.
+
 7.Post browser & Tag Referencer access buttons. (Tips: Internet connection permission must be turned ON in options first for the function.)
 
 </details>
