@@ -8,7 +8,7 @@ You see an image. You see one of its tags. You press **Yes** or **No**. The capt
 
 If you have played Civitai's *Knights of the New Order* image-rating game, the rhythm is familiar: image up, quick decision, next — except here you are cleaning your own training data instead of moderating a queue.
 
-![TagWalker](images/main_ui.png)
+![TagWalker](images/hero_gif.gif)
 
 ---
 
